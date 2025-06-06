@@ -32,7 +32,7 @@ public readonly struct BinnedEvents
         FreqMinutes = Freqs.Select(x => x * 60).ToArray();
         MeanAmplitude = BinnedCycles
             .Select(x => x.Select(x => x.Amplitude))
-            .Select(x => x.Any() ? x.Average() : double.NaN)
+            .Select(x => x.Any() ? x.Average() : 0)
             .ToArray();
     }
 
