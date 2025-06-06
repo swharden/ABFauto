@@ -180,7 +180,7 @@ public static class ScottPlotExtensions
     {
         foreach (var tag in abf.Tags)
         {
-            plot.Add.VerticalLine(tag.Time / 60, 2, Colors.Red.WithAlpha(.5), LinePattern.DenselyDashed);
+            plot.Add.VerticalLine(tag.Time / abf.ChannelCount / 60, 2, Colors.Red.WithAlpha(.5), LinePattern.DenselyDashed);
         }
 
         return plot;
